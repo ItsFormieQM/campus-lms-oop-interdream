@@ -7,7 +7,10 @@ class AcademicTask(ABC):
         self.max_points = max_points
         self.is_graded = bool 
 
+<<<<<<< HEAD
     @abstractmethod
+=======
+>>>>>>> A-Part
     def submit_work(self):
         pass
 
@@ -15,7 +18,11 @@ class AcademicTask(ABC):
         pass
 
     def get_details(self):
+<<<<<<< HEAD
         pass 
 def CS_ILA(AcademicTask):
     def __init__():
         pass
+=======
+        pass 
+>>>>>>> A-Part
