@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 import globalvars as globalv
 import os
-
+# extra stuff i made
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def change_langdir(path):
