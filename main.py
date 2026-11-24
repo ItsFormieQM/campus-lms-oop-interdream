@@ -1,12 +1,7 @@
 import localizer
-import globalvars
-import ext
-import methods
-localizer.switch_lang("en.json")
+import base_task
 def main():
-    hi = localizer.text_setloc("Hello World","placeholder_msg_1")
-    print(localizer.text_logic_setloc("Exit","placeholder_msg_1","UI"))
-    print(hi)
-
+   Homework = base_task.AcademicTask()
+   
 if __name__ == "__main__":
     main()
