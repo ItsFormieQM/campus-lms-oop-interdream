@@ -1,5 +1,10 @@
 # CS III Practical Test 
 # Student Management System
+Grade & Section:
+- Grade 9 Lithium
+
+Teacher/Supervisor: 
+- John Bon Juvie Jumarito
 
 Members:
 - Hezekiah Pollux J. Enguito (Formerhyde)
