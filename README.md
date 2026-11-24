@@ -6,4 +6,7 @@ Members:
 - Castor Troy Quimno (cmquimno)
 - Joeje Marj Araneta (jtaraneta-creator)
 
-# Please follow the license
+# Please respect the license please!
+
+# Key Feature Here
+- Uses a localizer system to be able to use different languages translated by the developers.
