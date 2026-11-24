@@ -1,17 +1,16 @@
 # this has translation ig
-import localizer
 class StudentProfile:
-    def __init__(self,student_name, student_id):
+    def __init__(self,student_name:int, student_id:str):
         self.student_name = student_name
         self.student_id = student_id
         self.__total_score = 0
     
-    def add_points(self,points_earned):
+    def add_points(self,points_earned:int):
         if points_earned < 0:
-            raise ValueError(localizer.text_setloc("Cannot add negative points!","error_msg1"))
+            raise ValueError("Cannot add negative points!")
             
         self.__total_score += points_earned
-        print(f"{points_earned}{localizer.text_setloc(" points added to your inventory!","success_msg1")}")
+        print(f"{points_earned} points added to your inventory!")
     def get_current_points(self):
         return self.__total_score
 
