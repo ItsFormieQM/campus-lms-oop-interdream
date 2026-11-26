@@ -1,4 +1,4 @@
-# this has translation ig
+
 class StudentProfile:
     def __init__(self,student_name:int, student_id:str):
         self.student_name = student_name
