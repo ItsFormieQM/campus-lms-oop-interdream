@@ -5,7 +5,7 @@ class AcademicTask(ABC):
     def __init__(self, title: str, max_points: int):
         self.title = title
         self.max_points = max_points
-        self.is_graded = bool 
+        self.is_graded = False
 
     def submit_work(self):
         pass
