@@ -1,6 +1,6 @@
 
 class StudentProfile:
-    def __init__(self,student_name:int, student_id:str):
+    def __init__(self,student_name, student_id):
         self.student_name = student_name
         self.student_id = student_id
         self.__total_score = 0
