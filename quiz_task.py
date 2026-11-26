@@ -3,7 +3,7 @@ from abc import abstractmethod, ABC
 
 class Quiz(AcademicTask):
     def __init__(self, title, total_questions, max_points):
-        super().__init__(self, title, max_points)
+        super().__init__(title, max_points)
         self.__total_quetions = total_questions
         self.correct_answers = 0
 
