@@ -13,7 +13,7 @@ class Essay(AcademicTask):
         self.is_graded = True
         if self.submitted_word_count >= self.__minimum_words:
             return self.max_points
-        return self.max_points - (self.max_points * 0.2)
+        return (self.max_points - (self.max_points * 0.2))
     def get_details(self):
         print(f"[ESSAY] {self.title} - Max Points: {self.max_points}")
         return
