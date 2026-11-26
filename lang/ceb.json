@@ -1,0 +1,13 @@
+{
+    "placeholder_msg_1":"Kumusta tanan!",
+    "intro1":"--- Test 1: Testingon kung i-reject ba ang negative points ---",
+    "intro1_1":"Karon nga score kang",
+    "intro2":"Na-switch ang lingwahi padung ",
+    "intro3_1":"Kung mag-add ta ug ",
+    "intro3_2":" ka puntos sa estudyante, mo print siyag error.",
+    "intro4":"Aron dili mo undang ang programa, gi kuha ang error sa try-except function.",
+    "intro5":"--- Test 2: Kailangan dili molabaw ug 100 o moubos kung padung negatibo ---",
+    "intro6":"ka punto I gamit aron makita ang resulta.",
+    "intro7":"--- Test 3: I-sure nga private ang variable nga 'total_scores'. ---",
+    "intro8":"Gi-access na ang variable..."
+}

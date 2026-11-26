@@ -13,6 +13,3 @@ class StudentProfile:
         print(f"{points_earned} points added to your inventory!")
     def get_current_points(self):
         return self.__total_score
-
-test = StudentProfile("Former","67")
-test.add_points(0)
