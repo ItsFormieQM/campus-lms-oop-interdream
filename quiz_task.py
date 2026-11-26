@@ -2,7 +2,7 @@ from base_task import AcademicTask
 from abc import abstractmethod, ABC
 
 class Quiz(AcademicTask):
-    def __init__(self, title, total_questions, max_points: int):
+    def __init__(self, title, total_questions, max_points):
         super().__init__(self, title, max_points)
         self.__total_quetions = 0
         self.correct_answers = 0
@@ -16,6 +16,6 @@ class Quiz(AcademicTask):
         return ((self.correct_answers/self.__total_quetions)* self.max_points)
 
     def get_details(self):
-        print(f"[QUIZ] {title} - Max Points: {self.max_points}")
+        print(f"[QUIZ] {self.title} - Max Points: {self.max_points}")
 
 
