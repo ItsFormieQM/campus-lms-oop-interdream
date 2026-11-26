@@ -1,8 +1,10 @@
 import localizer
 import portal
+import essay_task
 # import quiz_task
 # import essay_task
 # import auto_grader
+from globalvars import slownsteady
 import student
 from math import floor
 langlist = [
@@ -10,6 +12,9 @@ langlist = [
     localizer.text_logic_setloc("Bisaya/Cebuano","","ceb.json")
 ]
 langind = 0
+def wait():
+    if slownsteady:
+        input("\nWaiting... Press Enter to continue!")
 def check_lang(li):
     if li >= 0 and li < len(langlist):
         localizer.switch_lang(langlist[li][2])
@@ -42,7 +47,7 @@ except ValueError as e:
     print(e)
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
 print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
-
+wait()
 
 print("\n"+localizer.text_setloc("--- Test 2: Scores should be clamped to 100 (it errors actually when the score is over 100) ---","intro5")+"\n")
 temp = -999
@@ -55,7 +60,7 @@ except ValueError as e:
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
     pass
 print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
-
+wait()
 
 print("\n"+localizer.text_setloc("--- Test 3: Ensuring variable 'total_score' is private. ---","intro7")+"\n")
 print(localizer.text_setloc("Accessing the private variable...","intro8"))
@@ -64,7 +69,7 @@ try:
 except AttributeError as e:
     print(e)
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
-
+wait()
 
 print("\n"+localizer.text_setloc("--- Test 4: Course Portal should bar submission after its locked. ---","intro9")+"\n")
 print(localizer.text_setloc("Submitting Test Work...","intro10"))
@@ -79,4 +84,19 @@ except ValueError as e:
     pass
 
 print(localizer.text_setloc("Thats all of this simple testing ground for Practical 1.","intro11_end"))
-exit()
+wait()
+print("[Practical 2]")
+print(localizer.text_setloc(" [Info] - This part simulates the Finals",""))
+# be gone memory users
+del st1,port1
+import quiz_task
+quizzes = [
+    quiz_task.Quiz("Pointers and Addresses",20,60),
+    quiz_task.Quiz("All about memory",25,40),
+
+    essay_task.Essay("Why is C/C++ so common in games and programs back then?"),
+    essay_task.Essay("What is Reverse Engineering?"),
+]
+st1 = student.StudentProfile("Noelle Holiday","id-1225")
+port1 = portal.CoursePortal("Computer Science General C/C++ Basics")
+wait()
