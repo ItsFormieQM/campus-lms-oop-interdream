@@ -16,6 +16,6 @@ class Quiz(AcademicTask):
         return ((self.correct_answers/self.__total_quetions)* self.max_points)
 
     def get_details(self):
-        print(f"[QUIZ] {title} - Max Points: {self.max_points}")
+        print(f"[QUIZ] {self.title} - Max Points: {self.max_points}")
 
 
