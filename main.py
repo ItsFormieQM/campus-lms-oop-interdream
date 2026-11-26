@@ -14,7 +14,7 @@ langlist = [
 langind = 0
 def wait():
     if slownsteady:
-        input("\nWaiting... Press Enter to continue!")
+        input(f"\n{localizer.text_setloc("Waiting... Press Enter to continue!","wait_prompt")}")
 def check_lang(li):
     if li >= 0 and li < len(langlist):
         localizer.switch_lang(langlist[li][2])
@@ -94,8 +94,8 @@ quizzes = [
     quiz_task.Quiz("Pointers and Addresses",20,60),
     quiz_task.Quiz("All about memory",25,40),
 
-    essay_task.Essay("Why is C/C++ so common in games and programs back then?"),
-    essay_task.Essay("What is Reverse Engineering?"),
+    essay_task.Essay("Why is C/C++ so common in games and programs back then?",30,100),
+    essay_task.Essay("What is Reverse Engineering?",50,125),
 ]
 st1 = student.StudentProfile("Noelle Holiday","id-1225")
 port1 = portal.CoursePortal("Computer Science General C/C++ Basics")
