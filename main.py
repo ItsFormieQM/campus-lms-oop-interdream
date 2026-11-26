@@ -1,8 +1,8 @@
 import localizer
 import portal
-import quiz_task
-import essay_task
-import auto_grader
+# import quiz_task
+# import essay_task
+# import auto_grader
 import student
 from math import floor
 langlist = [
@@ -52,6 +52,7 @@ try:
     st1.add_points(temp)
 except ValueError as e:
     print(e)
+    print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
     pass
 print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
 
@@ -62,6 +63,20 @@ try:
     print(st1.__total_score)
 except AttributeError as e:
     print(e)
+    print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
 
 
+print("\n"+localizer.text_setloc("--- Test 4: Course Portal should bar submission after its locked. ---","intro9")+"\n")
+print(localizer.text_setloc("Submitting Test Work...","intro10"))
+port1 = portal.CoursePortal("Game Development Basics - Music Design")
+port1.accept_submission(st1.student_name)
+port1.lock_portal()
+try:
+    port1.accept_submission(st1.student_name)
+except ValueError as e:
+    print(e)
+    print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
+    pass
+
+print(localizer.text_setloc("Thats all of this simple testing ground for Practical 1.","intro11_end"))
 exit()
