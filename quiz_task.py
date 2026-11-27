@@ -11,7 +11,7 @@ class Quiz(AcademicTask):
         self.correct_answers = correct_answers
         print(f"Quiz submitted: {self.title}")
 
-    def grade_work(self, is_graded):
+    def grade_work(self):
         self.is_graded = True 
         return ((self.correct_answers/self.__total_quetions)* self.max_points)
 
