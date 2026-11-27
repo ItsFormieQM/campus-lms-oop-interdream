@@ -83,20 +83,49 @@ except ValueError as e:
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
     pass
 
-print(localizer.text_setloc("Thats all of this simple testing ground for Practical 1.","intro11_end"))
+print(localizer.text_setloc("Thats all of this simple testing ground for Practical 1.","intro10_end"))
 wait()
 print("[Practical 2]")
-print(localizer.text_setloc(" [Info] - This part simulates the Finals",""))
+print(localizer.text_setloc("[Info] - This part simulates the Finals","intro11"))
 # be gone memory users
 del st1,port1
 import quiz_task
+import auto_grader
+def quizassign(lsq):
+    for i in range(len(lsq)):
+        print(lsq[i])
+        lsq[i][0].submit_work(lsq[i][1])
 quizzes = [
-    quiz_task.Quiz("Pointers and Addresses",20,60),
-    quiz_task.Quiz("All about memory",25,40),
+    quiz_task.Quiz("Pointers and Addresses",20,40),
+    quiz_task.Quiz("All about memory",25,45),
 
     essay_task.Essay("Why is C/C++ so common in games and programs back then?",30,100),
     essay_task.Essay("What is Reverse Engineering?",50,125),
 ]
+quizassign(
+    [
+        [
+            quizzes[0], 36
+        ],
+        [
+            quizzes[1], 41
+        ]
+    ]
+)
 st1 = student.StudentProfile("Noelle Holiday","id-1225")
-port1 = portal.CoursePortal("Computer Science General C/C++ Basics")
+port1 = portal.CoursePortal("Computer Science General Topics - C/C++ Basics")
+bg1 = auto_grader.BatchGrader()
+
+print(localizer.text_setloc("\n--- Test 1: Checking if the student can submit before the deadline. ---\n","intro12"))
+print(localizer.text_setloc("Making the student submit work...","intro13"))
+port1.accept_submission(st1.student_name)
+print(localizer.text_setloc("Locking submission bin...","intro14"))
+port1.lock_portal()
+print(localizer.text_setloc("Making the student submit work...","intro13"))
+try:
+    port1.accept_submission(st1.student_name)
+except ValueError as e:
+    print(e)
+    print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
+    pass
 wait()
