@@ -6,11 +6,12 @@ class Quiz(base_task.AcademicTask):
         self.__total_quetions = total_questions
         self.correct_answers = 0
 
+
     def submit_work(self, correct_answers):
         self.correct_answers = correct_answers
         print(f"Quiz submitted: {self.title}")
 
-    def grade_work(self, is_graded):
+    def grade_work(self):
         self.is_graded = True 
         return ((self.correct_answers/self.__total_quetions)* self.max_points)
 

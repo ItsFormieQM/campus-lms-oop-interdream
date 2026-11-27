@@ -39,19 +39,19 @@ print(localizer.text_setloc("--- Test 1: Checking if the program displays an err
 st1 = student.StudentProfile("Kris Holiday Dreemurr", "id-1225")
 st1.add_points(1225)
 temp = -999999
-print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
+print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_score()}")
 print(f"{localizer.text_setloc(f"Adding ","intro3_1")}{temp}{localizer.text_setloc(f" points to the student should print an error.","intro3_2")}") 
 try:
     st1.add_points(temp)
 except ValueError as e:
     print(e)
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
-print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
+print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_score()}")
 wait()
 
 print("\n"+localizer.text_setloc("--- Test 2: Scores should be clamped to 100 (it errors actually when the score is over 100) ---","intro5")+"\n")
 temp = -999
-print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
+print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_score()}")
 print(f"{temp} {localizer.text_setloc("points will be added to demonstrate the result.","intro6")}")
 try:
     st1.add_points(temp)
@@ -59,7 +59,7 @@ except ValueError as e:
     print(e)
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
     pass
-print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_points()}")
+print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_score()}")
 wait()
 
 print("\n"+localizer.text_setloc("--- Test 3: Ensuring variable 'total_score' is private. ---","intro7")+"\n")
@@ -93,7 +93,11 @@ import quiz_task
 import auto_grader
 def quizassign(lsq):
     for i in range(len(lsq)):
-        print(lsq[i])
+        
+        lsq[i][0].submit_work(lsq[i][1])
+def essayassign(lsq):
+    for i in range(len(lsq)):
+        
         lsq[i][0].submit_work(lsq[i][1])
 quizzes = [
     quiz_task.Quiz("Pointers and Addresses",20,40),
@@ -109,6 +113,16 @@ quizassign(
         ],
         [
             quizzes[1], 41
+        ]
+    ]
+)
+essayassign(
+    [
+        [
+            quizzes[2], quizzes[2].get_minimum_word_count()
+        ],
+        [
+            quizzes[3], quizzes[3].get_minimum_word_count() / 2
         ]
     ]
 )
@@ -128,4 +142,15 @@ except ValueError as e:
     print(e)
     print(localizer.text_setloc("To prevent the test from ending early, the exception was caught by the try-except function block.","intro4"))
     pass
+wait()
+
+
+print(localizer.text_setloc("\n--- Test 2: Passing the mixed list along with StudentProfile into the grade processor. ---\n","intro15"))
+print(localizer.text_setloc("Passing arguments 'quizzes: list' and 'st1: Student Instance' into BatchGrader.process_grades()...","intro16"))
+print(f"{localizer.text_setloc(f"Current score for","intro1_1")} {st1.student_name}: {st1.get_current_score()}")
+bg1.process_grades(quizzes,st1)
+wait()
+print()
+print(localizer.text_setloc("And thats all for Practical 2. Thank you for reading this!","intro17"))
+
 wait()

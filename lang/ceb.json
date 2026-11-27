@@ -17,6 +17,8 @@
     "intro12":"\n--- Test 1: I-verify kung pwede ba maka-submit ang studyanta kung wala pay deadline. ---\n",
     "intro13":"Nag-submit ug trabahoon...",
     "intro14":"Gi-lock ang submission bin...",
-    "intro15":"Nag-submit ug trabahoon...",
+    "intro15":"\n--- Test 2: I-pasa ang lista kuyog ang StudentProfile aron ma processo sa Batch Auto Grader. ---\n",
+    "intro16":"I-pasa ang argumento nga 'quizzes: list' ug 'st1: Student Instance' sa BatchGrader.process_grades()...",
+    "intro17":"Dayon mao rana tanan para sa Practical 2. Salamat kaayo sa inyong dedikasyon sa pagbasa aning reporta!",
     "wait_prompt":"Ga-standby... Pindota ang Enter nga button aron mo padayon!"
 }
