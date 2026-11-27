@@ -1,10 +1,9 @@
-from base_task import AcademicTask
-from abc import abstractmethod, ABC
+import base_task
 
-class Quiz(AcademicTask):
+class Quiz(base_task.AcademicTask):
     def __init__(self, title, total_questions, max_points):
-        super().__init__(self, title, max_points)
-        self.__total_quetions = 0
+        super().__init__(title, max_points)
+        self.__total_quetions = total_questions
         self.correct_answers = 0
 
     def submit_work(self, correct_answers):
