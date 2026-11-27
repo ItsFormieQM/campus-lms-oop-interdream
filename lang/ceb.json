@@ -1,0 +1,22 @@
+{
+    "placeholder_msg_1":"Kumusta tanan!",
+    "intro1":"--- Test 1: Testingon kung i-reject ba ang negative points ---",
+    "intro1_1":"Karon nga score kang",
+    "intro2":"Na-switch ang lingwahi padung ",
+    "intro3_1":"Kung mag-add ta ug ",
+    "intro3_2":" ka puntos sa estudyante, mo print siyag error.",
+    "intro4":"Aron dili mo undang ang programa, gi kuha ang error sa try-except function.",
+    "intro5":"--- Test 2: Kailangan dili molabaw ug 100 o moubos kung padung negatibo ---",
+    "intro6":"ka punto I gamit aron makita ang resulta.",
+    "intro7":"--- Test 3: I-sure nga private ang variable nga 'total_scores'. ---",
+    "intro8":"Gi-access na ang variable...",
+    "intro9":"--- Test 4: Dili na makasubmit ug bago kung gi lock na. ---",
+    "intro10":"Ga-submit ug trabaho para testing...",
+    "intro10_end":"And mao rana tanan. Salamat kaayo sa pag-basa ani tanan. Mao ni ang among code para sa Practical 1.",
+    "intro11":"[Impo] Gi-simular ang Finals.",
+    "intro12":"\n--- Test 1: I-verify kung pwede ba maka-submit ang studyanta kung wala pay deadline. ---\n",
+    "intro13":"Nag-submit ug trabahoon...",
+    "intro14":"Gi-lock ang submission bin...",
+    "intro15":"Nag-submit ug trabahoon...",
+    "wait_prompt":"Ga-standby... Pindota ang Enter nga button aron mo padayon!"
+}
