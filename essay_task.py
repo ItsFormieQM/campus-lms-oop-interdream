@@ -14,6 +14,8 @@ class Essay(AcademicTask):
         if self.submitted_word_count >= self.__minimum_words:
             return self.max_points
         return (self.max_points - (self.max_points * 0.2))
+    def get_minimum_word_count(self):
+        return self.__minimum_words
     def get_details(self):
         print(f"[ESSAY] {self.title} - Max Points: {self.max_points}")
         return
